@@ -6,12 +6,17 @@
 			My Web Page
 		</title>
 		<link rel = "stylesheet" type = "text/css" href = "15_11_2021.css" />
+		<script type="text/javascript">
+			function func(){
+				document.body.style.backgroundColor= purple;
+			}
+		</script>
 	</head>
 	<body>
 		<p>
 			<strong>Introduction to Information Systems</strong>
 		</p>
-		<p class="centered">
+		<p class="centered" onmouseover="document.querySelector('.centered').style.font = 'bold 20pt arial,serif' ">
 			<em>
 				Kaleab Abayneh Gizaw
 				<br>
@@ -21,13 +26,13 @@
 		<p>
 			Evolution of Human Species
 		</p>
-		<ul>
+		<ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor = 'purple'">
 			<li>Homo habilius (able man)</li>
 			<li>Homo erectus (upright man)</li>
 			<li>Homo neanderthalensis</li>
 			<li>Homo floresiensis(hobbit)</li>
 			<li>Homo sapiens (wise man)</li>
-			<ul>
+			<ul id="unorderedInnerL" onclick="document.getElementById('unorderedInnerL').style.backgroundColor = 'orange'">
 				<li>Homo sapiens sapiens</li>
 			</ul>
 		</ul>
@@ -45,7 +50,7 @@
 		</p>
 
 		<h2>Clickable Image</h2>
-		<p>This image is a link, try it.<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"><img src="./evolution-diagram.png" alt="human evolution diagram"></a></p>
+		<p>This image is a link, try it.<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"><img id="myImg" src="./evolution-diagram.png" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)"></a></p>
 		<table>
 			<tr>
 				<th>Homo habilis</th>
